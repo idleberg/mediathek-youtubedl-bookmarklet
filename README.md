@@ -14,4 +14,4 @@
 
 2. Next, install the bookmarklet from the [project website]((https://idleberg.github.io/mediathek-youtubedl-bookmarklet/))
 
-3. Lastly, go to [MediathekViewWeb](http://mediathekviewweb.de/) and search for a movie. Click the bookmarklet to copy the download commands to your clipboard (Chrome-based browsers only) or copy the results from the alert window
+3. Lastly, go to [MediathekViewWeb](http://mediathekviewweb.de/) and search for a movie. Click the bookmarklet to copy the download commands to your clipboard (Chrome-based browsers only) or copy the results from the alert window (Firefox)
