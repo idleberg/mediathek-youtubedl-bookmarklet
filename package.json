@@ -8,8 +8,8 @@
     "start": "chokidar \"src/*\" -c \"npm run build\""
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jan T. Sott",
+  "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.5",
     "terser": "^5.5.1"
