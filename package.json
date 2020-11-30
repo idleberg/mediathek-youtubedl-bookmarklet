@@ -4,7 +4,8 @@
   "private": true,
   "description": "Bookmarklet to create a list of `youtube-dl` commands for search results on MediathekViewWeb",
   "scripts": {
-    "build": "node ./bin/build.mjs"
+    "build": "node ./bin/build.mjs",
+    "start": "chokidar \"src/*\" -c \"npm run build\""
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "terser": "^5.5.1"
   },
   "devDependencies": {
+    "chokidar-cli": "^2.1.0",
     "eslint": "^7.14.0",
     "eslint-plugin-json": "^2.1.2",
     "husky": "^4.3.0",
