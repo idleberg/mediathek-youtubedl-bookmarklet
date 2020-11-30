@@ -25,7 +25,6 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
-      - run: npm test
       - run: npm run build
 
       - name: Deploy
