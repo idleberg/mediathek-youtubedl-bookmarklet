@@ -3,6 +3,7 @@
 > Bookmarklet to create a list of `youtube-dl` commands for search results on [MediathekViewWeb](http://mediathekviewweb.de/)
 
 ![github pages](https://github.com/idleberg/mediathek-youtubedl-bookmarklet/workflows/github%20pages/badge.svg)
+[![david-dm](https://badgen.net/david/dep/idleberg/ediathek-youtubedl-bookmarklet)](https://david-dm.org/idleberg/ediathek-youtubedl-bookmarklet)
 
 ## tl;dr
 
