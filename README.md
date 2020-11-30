@@ -4,7 +4,7 @@
 
 ![github pages](https://github.com/idleberg/mediathek-youtubedl-bookmarklet/workflows/github%20pages/badge.svg)
 
-## TL;DR
+## tl;dr
 
 [Get the bookmarklet here!](https://idleberg.github.io/mediathek-youtubedl-bookmarklet/)
 
