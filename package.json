@@ -1,8 +1,8 @@
 {
   "name": "mediathek-youtube-dl-bookmarklet",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Bookmarklet to create a list of `youtube-dl` commands for search results on MediathekViewWeb",
   "scripts": {
     "build": "node ./bin/build.mjs"
   },
