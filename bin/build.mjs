@@ -13,7 +13,13 @@ import { minify } from 'terser';
     const href = `javascript:(function()\{${encodeURI(code)}\})()`;
 
     const output = render(html, {bookmarklet: href});
+    const outFolder = './public';
+    const outFile = join(outFolder, 'index.html');
 
+    await fs.rm('./public', {
+        force: true,
+        recursive: true
+    });
     await fs.mkdir('./public');
-    await fs.writeFile('./public/index.html', output);
+    await fs.writeFile(outFile, output);
 })();
