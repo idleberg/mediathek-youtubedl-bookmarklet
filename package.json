@@ -1,6 +1,6 @@
 {
   "name": "mediathek-youtube-dl-bookmarklet",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "description": "Bookmarklet to create a list of `youtube-dl` commands for search results on MediathekViewWeb",
   "scripts": {
