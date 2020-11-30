@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { promises as fs } from 'fs';
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 import { render } from 'ejs';
 import { minify } from 'terser';
 
@@ -14,5 +14,6 @@ import { minify } from 'terser';
 
     const output = render(html, {bookmarklet: href});
 
-    await fs.writeFile('./index.html', output);
+    await fs.mkdir('./public');
+    await fs.writeFile('./public/index.html', output);
 })();
