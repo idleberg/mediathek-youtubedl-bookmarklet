@@ -5,7 +5,8 @@
   "description": "Bookmarklet to create a list of `youtube-dl` commands for search results on MediathekViewWeb",
   "scripts": {
     "build": "node ./bin/build.mjs",
-    "start": "chokidar \"src/*\" -c \"npm run build\""
+    "start": "chokidar \"src/*\" -c \"npm run build\"",
+    "test": "eslint"
   },
   "keywords": [],
   "author": "Jan T. Sott",
