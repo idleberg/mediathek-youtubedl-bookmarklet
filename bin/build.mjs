@@ -13,29 +13,43 @@ const htmlMinifyOptions = {
 };
 
 (async () => {
-    const bookmarkletFile = resolve('./src/bookmarklet.js');
-    const htmlFile = resolve('./src/index.ejs');
-    const faviconFile = resolve('./src/favicon.svg');
+    const input = {
+        bookmarklet: resolve('./src/bookmarklet.js'),
+        html: resolve('./src/index.ejs'),
+        favicon: resolve('./src/favicon.svg')
+    };
 
-    const bookmarklet = (await fs.readFile(bookmarkletFile)).toString();
-    const favicon = (await fs.readFile(faviconFile)).toString();
-    const html = (await fs.readFile(htmlFile)).toString();
+    // Read files
+    const contents = {
+        bookmarklet: (await fs.readFile(input.bookmarklet)).toString(),
+        favicon: (await fs.readFile(input.favicon)).toString(),
+        html: (await fs.readFile(input.html)).toString()
+    };
 
-    const { code } = (await minify(bookmarklet));
+    const { code } = (await minify(contents.bookmarklet));
     const href = `javascript:(function()\{${encodeURI(code)}\})()`;
 
-    const htmlOutput = await htmlMinify(render(html, {bookmarklet: href}), htmlMinifyOptions);
-    const faviconOutput = await htmlMinify(favicon, htmlMinifyOptions);
+    // Minify files
+    const minified = {
+        html: await htmlMinify(render(contents.html, {bookmarklet: href}), htmlMinifyOptions),
+        favicon: await htmlMinify(contents.favicon, htmlMinifyOptions)
+    };
 
     const outFolder = './public';
-    const faviconOutputFile = join(outFolder, 'favicon.svg');
-    const htmlOutputFile = join(outFolder, 'index.html');
 
-    await fs.rm('./public', {
+    const output = {
+        favicon: join(outFolder, 'favicon.svg'),
+        html: join(outFolder, 'index.html')
+    };
+
+    // Clean up
+    await fs.rm(outFolder, {
         force: true,
         recursive: true
     });
-    await fs.mkdir('./public');
-    await fs.writeFile(faviconOutputFile, faviconOutput);
-    await fs.writeFile(htmlOutputFile, htmlOutput);
+
+    // Write output
+    await fs.mkdir(outFolder);
+    await fs.writeFile(output.favicon, minified.favicon);
+    await fs.writeFile(output.html, minified.html);
 })();
