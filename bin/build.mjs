@@ -7,8 +7,12 @@ import { promises as fs } from 'fs';
 import { render } from 'ejs';
 
 (async () => {
-    const bookmarklet = (await fs.readFile(resolve('./src/bookmarklet.js'))).toString();
-    const html = (await fs.readFile(resolve('./src/index.ejs'))).toString();
+    const bookmarkletFile = resolve('./src/bookmarklet.js');
+    const htmlFile = resolve('./src/index.ejs');
+    const faviconFile = resolve('./src/favicon.svg');
+
+    const bookmarklet = (await fs.readFile(bookmarkletFile)).toString();
+    const html = (await fs.readFile(htmlFile)).toString();
 
     const { code } = (await minify(bookmarklet));
     const href = `javascript:(function()\{${encodeURI(code)}\})()`;
@@ -26,5 +30,6 @@ import { render } from 'ejs';
         recursive: true
     });
     await fs.mkdir('./public');
+    await fs.copyFile(faviconFile, './public/favicon.svg');
     await fs.writeFile(outFile, output);
 })();
