@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build"
+    "build": "node ./bin/build.mjs"
   },
   "keywords": [],
   "author": "",
