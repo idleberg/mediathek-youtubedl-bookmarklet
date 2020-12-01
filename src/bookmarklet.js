@@ -3,7 +3,11 @@ const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
 const mvwOrigin = 'https://mediathekviewweb.de';
 
 function getRows() {
-  return Array.from(document.querySelectorAll('table#mediathek tbody tr'));
+  const rows = Array.from(document.querySelectorAll('table#mediathek tbody tr'));
+
+  return rows.length
+    ? rows
+    : [];
 }
 
 function getCommandLine(tableRows) {
@@ -48,6 +52,12 @@ async function writeToClipboard(commandList) {
   if (!isEligibleOrigin()) return;
 
   const tableRows = getRows();
+
+  if (!tableRows.length) {
+    alert('No results found on page');
+    return;
+  }
+
   const list = getCommandLine(tableRows);
   const commandList = list.join('\n');
 
