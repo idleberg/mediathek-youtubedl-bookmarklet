@@ -15,12 +15,15 @@
 
 2. Next, install the bookmarklet from the [project website][website]
 
-3. Go to [MediathekViewWeb](http://mediathekviewweb.de/) and search for a movie. Click the bookmarklet to copy the download commands to your clipboard (Chrome-based browsers only) or copy the results from the alert window (Firefox)
+3. Go to [MediathekViewWeb](http://mediathekviewweb.de/) and search for a movie. Click the bookmarklet to copy the download commands to your clipboard¹
 
 4. Paste the results to your Terminal – happy downloading!
+
+¹ Writing to the clipboard is only supported by Chrome-based browsers at this moment. Firefox users will have to copy the commands from the alert modal.
 
 ## License
 
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
 
 [website]: https://idleberg.github.io/mediathek-youtubedl-bookmarklet/
+bulb
