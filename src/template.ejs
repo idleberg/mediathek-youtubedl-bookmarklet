@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bookmarklet to create a list of youtube-dl commands for search results on MediathekViewWeb" />
+    <title>MediathekViewWeb Bookmarklet</title>
+    <link rel="icon" href="favicon.svg">
+    <style>/*! tailwindcss v2.1.1 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */*,::after,::before{box-sizing:border-box}:root{-moz-tab-size:4;tab-size:4}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'}hr{height:0;color:inherit}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}button{-webkit-appearance:button}legend{padding:0}progress{vertical-align:baseline}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}button{background-color:transparent;background-image:none}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}fieldset{margin:0;padding:0}ol,ul{list-style:none;margin:0;padding:0}html{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";line-height:1.5}body{font-family:inherit;line-height:inherit}*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}hr{border-top-width:1px}img{border-style:solid}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button{cursor:pointer}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,optgroup,select,textarea{padding:0;line-height:inherit;color:inherit}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgba(79,70,229,var(--tw-bg-opacity))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgba(67,56,202,var(--tw-bg-opacity))}.border-transparent{border-color:transparent}.rounded-md{border-radius:.375rem}.border{border-width:1px}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}.font-medium{font-weight:500}.font-extrabold{font-weight:800}.h-full{height:100%}.h-screen{height:100vh}.text-base{font-size:1rem;line-height:1.5rem}.text-2xl{font-size:1.5rem;line-height:2rem}.mx-5{margin-left:1.25rem;margin-right:1.25rem}.mx-auto{margin-left:auto;margin-right:auto}.mt-3{margin-top:.75rem}.mt-8{margin-top:2rem}.p-4{padding:1rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}*{--tw-shadow:0 0 #0000}.shadow{--tw-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}*{--tw-ring-inset:var(--tw-empty, );/*!*//*!*/--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000}.text-center{text-align:center}.text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgba(17,24,39,var(--tw-text-opacity))}.text-red-600{--tw-text-opacity:1;color:rgba(220,38,38,var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgba(79,70,229,var(--tw-text-opacity))}.tracking-tight{letter-spacing:-.025em}.w-full{width:100%}@keyframes spin{to{transform:rotate(360deg)}}@keyframes ping{100%,75%{transform:scale(2);opacity:0}}@keyframes pulse{50%{opacity:.5}}@keyframes bounce{0%,100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,.2,1)}}@media (min-width:640px){.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:mx-auto{margin-left:auto;margin-right:auto}.sm\:mt-5{margin-top:1.25rem}}@media (min-width:768px){.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:mx-0{margin-left:0;margin-right:0}.md\:mt-5{margin-top:1.25rem}}@media (min-width:1024px){.lg\:flex-shrink-0{flex-shrink:0}.lg\:mx-0{margin-left:0;margin-right:0}.lg\:mt-5{margin-top:1.25rem}.lg\:w-2\/3{width:66.666667%}}@media (min-width:1280px){.xl\:inline{display:inline}}</style>
+  </head>
+  <body class="flex flex-col bg-grey-lighter dark:bg-gray-800 h-screen font-sans">
+    <main class="container mx-auto h-full flex justify-center items-center">
+      <div class="mx-5 w-full lg:w-2/3 md:mx-0">
+
+        <h1 class="text-2xl tracking-tight font-extrabold text-gray-900">
+          <span class="block xl:inline">
+            🍿 MediathekViewWeb Bookmarklet
+          </span>
+        </h1>
+
+        <p
+          class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+        >
+          This bookmarklet generates a list of
+          <a href="https://github.com/ytdl-org/youtube-dl/" target="_blank" title="GitHub repository of youtube-dl">
+            <code class="text-red-600">youtube-dl</code>
+          </a>
+          commands for search results on
+          <a
+            href="https://mediathekviewweb.de/"
+            class="text-indigo-600"
+            target="_blank"
+            >MediathekViewWeb</a
+          >. To install it, drag the link below into your browser's bookmark
+          bar.
+        </p>
+
+        <div class="mt-8 lex lg:mt-5 lg:flex-shrink-0">
+          <div class="inline-flex rounded-md shadow">
+            <a
+              href="<%- bookmarklet %>"
+              class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+              title="Drag me to your bookmark bar"
+            >
+              mediathek-dl
+            </a>
+          </div>
+        </div>
+
+        <p
+          class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+        >Once installed, search for any movie in the Mediathek, then click the bookmarklet. This will copy all download commands to your clipboard (Chrome) or print it in the alert message (Firefox).</p>
+
+      </div>
+    </main>
+
+    <footer class="w-full text-center p-4 pin-b">
+      <a href="https://github.com/idleberg/mediathek-youtubedl-bookmarklet" class="text-indigo-600">Code on GitHub</a>
+    </footer>
+  </body>
+</html>

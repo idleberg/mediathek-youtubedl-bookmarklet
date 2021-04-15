@@ -15,7 +15,7 @@ const htmlMinifyOptions = {
 (async () => {
     const input = {
         bookmarklet: resolve('./src/bookmarklet.js'),
-        html: resolve('./src/index.ejs'),
+        template: resolve('./src/template.ejs'),
         favicon: resolve('./src/favicon.svg')
     };
 
@@ -23,7 +23,7 @@ const htmlMinifyOptions = {
     const contents = {
         bookmarklet: (await fs.readFile(input.bookmarklet)).toString(),
         favicon: (await fs.readFile(input.favicon)).toString(),
-        html: (await fs.readFile(input.html)).toString()
+        html: (await fs.readFile(input.template)).toString()
     };
 
     const { code } = (await minify(contents.bookmarklet));
