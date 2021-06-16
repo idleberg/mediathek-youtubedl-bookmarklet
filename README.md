@@ -15,11 +15,9 @@
 
 2. Next, install the bookmarklet from the [project website][website]
 
-3. Go to [MediathekViewWeb](http://mediathekviewweb.de/) and search for a movie. Click the bookmarklet to copy the download commands to your clipboard¹
+3. Go to [MediathekViewWeb](http://mediathekviewweb.de/) and search for a movie. Click the bookmarklet to copy the download commands to your clipboard
 
 4. Paste the results to your Terminal – happy downloading!
-
-¹ Writing to the clipboard is only supported by Chrome-based browsers at this moment. Firefox users will have to copy the commands from the alert modal.
 
 ## License
 
