@@ -1,5 +1,4 @@
 const invalidCharacters = new RegExp('[<>:"/\\|?*]+', 'g');
-const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
 const mvwOrigin = 'https://mediathekviewweb.de';
 
 function getRows() {
@@ -32,19 +31,13 @@ function isEligibleOrigin() {
 }
 
 async function writeToClipboard(commandList) {
-  const result = await navigator.permissions.query({
-    name: 'clipboard-write',
-  });
+  try {
+    await navigator.clipboard.writeText(commandList);
+  } catch (err) {
+    console.error(err);
+    alert('Copying to clipboard failed, see console for details');
 
-  if (result.state == 'granted' || result.state == 'prompt') {
-    try {
-      await navigator.clipboard.writeText(commandList);
-    } catch (err) {
-      console.error(err);
-      alert('Copying to clipboard failed, see console for details');
-
-      return;
-    }
+    return;
   }
 }
 
@@ -61,10 +54,6 @@ async function writeToClipboard(commandList) {
   const list = getCommandLine(tableRows);
   const commandList = list.join('\n');
 
-  if (isFirefox) {
-    alert(commandList);
-  } else {
-    await writeToClipboard(commandList);
-    alert(`Successfully copied ${list.length} items to clipboard`);
-  }
+  await writeToClipboard(commandList);
+  alert(`Successfully copied ${list.length} items to clipboard`);
 })();
