@@ -30,9 +30,10 @@ function isEligibleOrigin() {
   return true;
 }
 
-async function writeToClipboard(commandList) {
+async function writeToClipboard(commandList, length) {
   try {
     await navigator.clipboard.writeText(commandList);
+    alert(`Successfully copied ${length} items to clipboard`);
   } catch (err) {
     console.error(err);
     alert('Copying to clipboard failed, see console for details');
@@ -57,7 +58,6 @@ async function writeToClipboard(commandList) {
   if (localStorage.getItem('youtube-dl.showInAlert') === "true") {
     alert(commandList);
   } else {
-    alert(`Successfully copied ${list.length} items to clipboard`);
-    await writeToClipboard(commandList);
+    await writeToClipboard(commandList, list.length);
   }
 })();
