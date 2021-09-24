@@ -54,7 +54,7 @@ async function writeToClipboard(commandList) {
   const list = getCommandLine(tableRows);
   const commandList = list.join('\n');
 
-  if (localStorage.get('youtube-dl.showInAlert') === "true") {
+  if (localStorage.getItem('youtube-dl.showInAlert') === "true") {
     alert(commandList);
   } else {
     alert(`Successfully copied ${list.length} items to clipboard`);
