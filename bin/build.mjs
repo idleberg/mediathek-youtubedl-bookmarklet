@@ -32,7 +32,10 @@ const htmlMinifyOptions = {
     // Minify files
     const minified = {
         html: await htmlMinify(render(contents.html, {bookmarklet: href}), htmlMinifyOptions),
-        favicon: await htmlMinify(contents.favicon, htmlMinifyOptions)
+        favicon: await htmlMinify(contents.favicon, {
+            ...htmlMinifyOptions,
+            removeAttributeQuotes: false
+        })
     };
 
     const outFolder = './public';
