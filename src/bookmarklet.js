@@ -45,6 +45,7 @@ async function writeToClipboard(commandList, length) {
 (async () => {
   if (!isEligibleOrigin()) return;
 
+  window.focus();
   const tableRows = getRows();
 
   if (!tableRows.length) {
