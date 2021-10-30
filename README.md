@@ -24,4 +24,3 @@
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
 
 [website]: https://idleberg.github.io/mediathek-youtubedl-bookmarklet/
-bulb
