@@ -13,8 +13,9 @@ function getCommandLine(tableRows) {
   return [...tableRows].map((item) => {
     const videoUrl = item.lastChild.lastChild.href;
     const outName = item.childNodes[2].innerText.replace(invalidCharacters, '');
+    const executable = localStorage.getItem('youtube-dl.executable') || 'youtube-dl';
 
-    return `youtube-dl ${videoUrl} --output "${outName}.mp4"`;
+    return `${executable} ${videoUrl} --output "${outName}.mp4"`;
   });
 }
 
