@@ -1,9 +1,14 @@
 name: github pages
 
 on:
-  push:
-    branches:
-      - main
+push:
+  branches:
+  - main
+  paths:
+  - 'build/**'
+  - 'src/**'
+  - 'package.json'
+  - 'package-lock.json'
 
 jobs:
   deploy:
