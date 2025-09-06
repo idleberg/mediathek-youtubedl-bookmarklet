@@ -1,6 +1,15 @@
+# package manager
+node_modules/
+package-lock.json
+yarn.lock
+
+# build output
+dist/
+.astro/
+
+# caches
 .eslintcache
+
+# project-specific
 gh-pages
 gh-pages.pub
-index.html
-node_modules/
-public/
